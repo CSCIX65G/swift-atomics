@@ -357,9 +357,4 @@ SWIFTATOMIC_STORAGE_TYPE(DoubleWord, _sa_dword, _sa_double_word_ctype)
 
 #endif // __swift__
 
-#if ENABLE_DOUBLEWIDE_ATOMICS
-extern void _sa_retain_n(void *object, uint32_t n);
-extern void _sa_release_n(void *object, uint32_t n);
-#endif
-
 #endif //SWIFTATOMIC_HEADER_INCLUDED

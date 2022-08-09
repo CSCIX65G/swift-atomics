@@ -38,11 +38,11 @@ internal var _concurrencyWindow: Int { 20 }
 
 extension Unmanaged {
   internal func retain(by delta: Int) {
-    _sa_retain_n(toOpaque(), UInt32(delta))
+      for _ in 0 ..< delta { _ = self.retain() }
   }
 
   internal func release(by delta: Int) {
-    _sa_release_n(toOpaque(), UInt32(delta))
+      for _ in 0 ..< delta { self.release() }
   }
 }
 
